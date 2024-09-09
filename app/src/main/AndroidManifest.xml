@@ -24,31 +24,40 @@
         </activity>
         <activity
             android:name=".home"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".sign_in"
+            android:launchMode="singleTop"
             android:exported="false" />
         <activity
             android:name=".sign_up"
+            android:launchMode="singleTop"
             android:exported="false" />
         <activity
             android:name=".Water_Electricity"
+            android:launchMode="singleTop"
             android:exported="false" />
         <activity
             android:name=".Education_Survey"
+            android:launchMode="singleTop"
             android:exported="false" />
 
         <activity
             android:name=".Tangible_Service_Survey"
+            android:launchMode="singleTop"
             android:exported="false" />
         <activity
             android:name=".Security_Survey"
+            android:launchMode="singleTop"
             android:exported="false" />
         <activity
             android:name=".organizationSurvey"
+            android:launchMode="singleTop"
             android:exported="false" />
         <activity
             android:name=".HealthSurvey"
+            android:launchMode="singleTop"
             android:exported="false" />
 
 
