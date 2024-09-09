@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tangible_Service_Survey"
+    android:layoutDirection="rtl"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نشكركم على تخصيص الوقت للمشاركة في هذا الاستبيان. هدفنا هو تقييم وتحسين جودة الخدمة المقدمة في منطقتكم. نرجو منكم الإجابة على الأسئلة التالية بناءً على تجربتكم الشخصية."
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvComplaintCountotng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="عدد الشكاوى و المقترحات : 0"
+            android:textAlignment="center"
+            android:textColor="#16831A"
+            android:textSize="18dp" />
+
+        <!-- Service Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اسم الخدمة"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etServiceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل اسم الخدمة"
+            android:inputType="text"/>
+
+        <!-- Personal Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="معلومات أساسية"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الاسم (اختياري)"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="المنطقة السكنية"
+            android:inputType="text"/>
+
+        <!-- Service Quality -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم جودة الخدمة المقدمة في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgServiceQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- Service Interruptions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كم مرة تواجه انقطاعاً في الخدمة خلال الشهر؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgServiceInterruptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbNoServiceInterruptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="لا يحدث انقطاع"/>
+
+            <RadioButton
+                android:id="@+id/rbRareServiceInterruptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نادراً (مرة واحدة في الشهر أو أقل)"/>
+
+            <RadioButton
+                android:id="@+id/rbSometimesServiceInterruptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="أحياناً (من مرتين إلى خمس مرات في الشهر)"/>
+
+            <RadioButton
+                android:id="@+id/rbOftenServiceInterruptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="كثيراً (أكثر من خمس مرات في الشهر)"/>
+        </RadioGroup>
+
+        <!-- Customer Service -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم مستوى التواصل مع خدمة العملاء بالنسبة لهذه الخدمة؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgCustomerService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentCustomerService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتاز"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodCustomerService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيد"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageCustomerService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسط"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorCustomerService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيف"/>
+        </RadioGroup>
+
+        <!-- Overall Satisfaction -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما مدى رضاك العام عن الخدمة المقدمة؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgOverallSatisfaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbVerySatisfied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="راضٍ جداً"/>
+
+            <RadioButton
+                android:id="@+id/rbSatisfied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="راضٍ"/>
+
+            <RadioButton
+                android:id="@+id/rbNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="محايد"/>
+
+            <RadioButton
+                android:id="@+id/rbDissatisfied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="غير راضٍ"/>
+
+            <RadioButton
+                android:id="@+id/rbVeryDissatisfied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="غير راضٍ تماماً"/>
+        </RadioGroup>
+
+        <!-- Suggestions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما هي التحسينات التي تقترحها لتحسين الخدمة المقدمة؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etServiceImprovements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل تحسينات الخدمة هنا"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="هل لديك أي تعليقات إضافية أو اقتراحات؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etAdditionalComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="هل لديك أي تعليقات إضافية أو اقتراحات؟ يمكن اضف معلومات الاتصال هنا بريد الالكتروني او رقم هاتف "
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="إرسال"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:background="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:padding="16dp"/>
+        <!-- Add this to your activity_health_survey.xml layout -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" /> <!-- Initially hidden -->
+
+        <!-- Lottie Animation for success -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/successAnimation"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/circle_loader"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false" />
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

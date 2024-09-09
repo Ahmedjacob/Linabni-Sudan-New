@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".organizationSurvey"
+    android:layoutDirection="rtl"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:paddingBottom="0dp">
+
+        <!-- مقدمة -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نشكركم على تخصيص الوقت للمشاركة في هذا الاستبيان. هدفنا هو تقييم وتحسين جودة خدمات منظمات المجتمع المدني في منطقتكم. نرجو منكم الإجابة على الأسئلة التالية بناءً على تجربتكم الشخصية."
+            android:textSize="16sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvComplaintCountorg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="عدد الشكاوى و المقترحات : 0"
+            android:textAlignment="center"
+            android:textColor="#16831A"
+            android:textSize="18dp" />
+
+        <!-- معلومات أساسية -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="معلومات أساسية"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الاسم (اختياري)"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="المنطقة السكنية"
+            android:inputType="text"/>
+        <!-- تحديد الموقع الجغرافي -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أين تقع منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbNorthKhartoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="شمال الخرطوم"/>
+
+            <RadioButton
+                android:id="@+id/rbSouthKhartoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جنوب الخرطوم"/>
+
+            <RadioButton
+                android:id="@+id/rbEastKhartoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="شرق الخرطوم"/>
+
+            <RadioButton
+                android:id="@+id/rbCenterKhartoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="وسط الخرطوم"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="حدد منطقتك بالتفصيل"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etSpecificArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل اسم المنطقة هنا"
+            android:inputType="text"/>
+        <!-- جودة الخدمات -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم جودة الخدمات المقدمة من قبل منظمات المجتمع المدني في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgServiceQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- سهولة الوصول إلى الخدمات -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما مدى سهولة الوصول إلى خدمات منظمات المجتمع المدني؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgAccessEase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbVeryEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="سهلة جدًا"/>
+
+            <RadioButton
+                android:id="@+id/rbEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="سهلة"/>
+
+            <RadioButton
+                android:id="@+id/rbNeutralAccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="محايدة"/>
+
+            <RadioButton
+                android:id="@+id/rbDifficult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="صعبة"/>
+
+            <RadioButton
+                android:id="@+id/rbVeryDifficult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="صعبة جدًا"/>
+        </RadioGroup>
+        <!-- وقت الانتظار -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما هو متوسط وقت الانتظار للحصول على خدمات منظمات المجتمع المدني؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgWaitTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbVeryShort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قصير جدًا (أقل من 10 دقائق)"/>
+
+            <RadioButton
+                android:id="@+id/rbShort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قصير (10-30 دقيقة)"/>
+
+            <RadioButton
+                android:id="@+id/rbMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسط (30-60 دقيقة)"/>
+
+            <RadioButton
+                android:id="@+id/rbLong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="طويل (أكثر من ساعة)"/>
+        </RadioGroup>
+
+        <!-- اقتراحات -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما هي التحسينات التي تقترحها لتحسين جودة خدمات منظمات المجتمع المدني؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etServiceImprovements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل تحسينات الخدمات هنا"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="هل لديك أي تعليقات إضافية أو اقتراحات؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etAdditionalComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="هل لديك أي تعليقات إضافية أو اقتراحات؟ يمكن اضف معلومات الاتصال هنا بريد الالكتروني او رقم هاتف"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+        <!-- زر الإرسال -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="إرسال"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:background="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:padding="16dp"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" /> <!-- Initially hidden -->
+
+        <!-- Lottie Animation for success -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/successAnimation"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/circle_loader"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false" />
+    </LinearLayout>
+</ScrollView>
+
+
+
+

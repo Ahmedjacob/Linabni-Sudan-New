@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Lnabin</string>
+    <string name="email_hint">البريد الإلكتروني</string>
+    <string name="name_hint">الاسم الكامل</string>
+    <string name="username_hint">اسم المستخدم</string>
+    <string name="password_hint">كلمة المرور</string>
+    <string name="mobile_hint">رقم الهاتف المحمول</string>
+    <string name="login_button_text">Login</string>
+    <string name="signup_button_text">Create Account? Signup</string>
+    <string name="switch_text">Switch</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="mobile_number_hint">Mobile Number</string>
+    <string name="already_have_account_text">Already have an Account ?</string>
+    <string name="desc">Sudan</string>
+    <string name="education">Education</string>
+    <string name="health">Health</string>
+    <string name="utilities">Utilities</string>
+    <string name="security">Security</string>
+    <string name="organizations">Organizations</string>
+    <string name="other_services">Other Services</string>
+    <string name="exit">Exit</string>
+
+    <!-- Arabic Strings -->
+    <string name="username_hint_ar">اسم المستخدم</string>
+    <string name="password_hint_ar">كلمة المرور</string>
+    <string name="login_button_text_ar">تسجيل الدخول</string>
+    <string name="signup_button_text_ar">إنشاء حساب؟ التسجيل</string>
+    <string name="switch_text_ar">تبديل</string>
+    <string name="sigup">تسجيل</string>
+    <string name="full_name_hinta">الاسم الكامل</string>
+    <string name="i_have_acount">لديك حساب بالفعل </string>
+    <string name="mobile_number_hintar">رقم الجوال</string>
+    <string name="educationar">تعليم</string>
+    <string name="healthar">صحة</string>
+    <string name="utilitiesar">مياه - كهرباء</string>
+    <string name="securityar">أمن - حماية</string>
+    <string name="organizationsar">منظمات</string>
+    <string name="other_servicesar">خدمات اخرى</string>
+    <string name="exitar">خروج</string>
+
+
+</resources>

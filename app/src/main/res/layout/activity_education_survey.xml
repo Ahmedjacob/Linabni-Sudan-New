@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Education_Survey"
+    android:layoutDirection="rtl"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="40dp"
+        android:paddingBottom="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نشكركم على تخصيص الوقت للمشاركة في هذا الاستبيان. هدفنا هو تقييم وتحسين جودة الخدمات التعليمية المقدمة في منطقتكم. نرجو منكم الإجابة على الأسئلة التالية بناءً على تجربتكم الشخصية."
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvEducationComplaintsCountEdu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="عدد الشكاوى و المقترحات : 0"
+            android:textAlignment="center"
+            android:textColor="#16831A"
+            android:textSize="18dp" />
+
+        <!-- Personal Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="معلومات أساسية"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الاسم (اختياري)"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="المنطقة السكنية"
+            android:inputType="text"/>
+
+        <!-- Educational Service Quality -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم جودة الخدمات التعليمية في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgEducationQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- Educational Facility Condition -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم حالة المرافق التعليمية (مدارس، مراكز تدريب،...) في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgFacilityCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentFacility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodFacility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageFacility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorFacility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- Teacher Quality -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم جودة المعلمين في المؤسسات التعليمية في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgTeacherQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentTeachers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodTeachers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageTeachers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorTeachers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- Service Availability -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="هل تتوفر الخدمات التعليمية في منطقتك بشكل كافٍ؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgServiceAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbServicesAlwaysAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوفرة دائماً"/>
+
+            <RadioButton
+                android:id="@+id/rbServicesSometimesAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوفرة أحياناً"/>
+
+            <RadioButton
+                android:id="@+id/rbServicesRarelyAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نادرًا ما تكون متوفرة"/>
+
+            <RadioButton
+                android:id="@+id/rbServicesNeverAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ليست متوفرة أبداً"/>
+        </RadioGroup>
+
+        <!-- Overall Satisfaction -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما مدى رضاك العام عن الخدمات التعليمية المقدمة؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgOverallSatisfactionEducation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbVerySatisfiedEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="راضٍ جداً"/>
+
+            <RadioButton
+                android:id="@+id/rbSatisfiedEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="راضٍ"/>
+
+            <RadioButton
+                android:id="@+id/rbNeutralEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="محايد"/>
+
+            <RadioButton
+                android:id="@+id/rbDissatisfiedEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="غير راضٍ"/>
+
+            <RadioButton
+                android:id="@+id/rbVeryDissatisfiedEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="غير راضٍ تماماً"/>
+        </RadioGroup>
+
+        <!-- Suggestions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما هي التحسينات التي تقترحها لتحسين الخدمات التعليمية؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etEducationImprovements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل تحسينات التعليم هنا"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+        <!-- Additional Comments -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" هل لديك أي تعليقات إضافية أو اقتراحات؟ يمكن اضف معلومات الاتصال هنا بريد الالكتروني او رقم هاتف "
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etAdditionalComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل تعليقات إضافية هنا"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="إرسال"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:background="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:padding="16dp"/>
+        <!-- Spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+    </LinearLayout>
+</ScrollView>
+

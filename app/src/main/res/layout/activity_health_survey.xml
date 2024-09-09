@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthSurvey"
+    android:layoutDirection="rtl"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:paddingBottom="0dp">
+
+        <!-- مقدمة -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نشكركم على تخصيص الوقت للمشاركة في هذا الاستبيان. هدفنا هو تقييم وتحسين جودة خدمات الرعاية الصحية المقدمة في منطقتكم. نرجو منكم الإجابة على الأسئلة التالية بناءً على تجربتكم الشخصية."
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            android:gravity="center"/>
+
+        <!-- معلومات أساسية -->
+        <TextView
+            android:id="@+id/tvComplaintCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="عدد الشكاوى و المقترحات : 0"
+            android:textAlignment="center"
+            android:textColor="#16831A"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="معلومات أساسية"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الاسم (اختياري)"
+            android:inputType="text"/>
+        <!-- الموقع الجغرافي -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="في أي منطقة في الخرطوم تقع؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbCentralKhartoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="وسط الخرطوم"/>
+
+            <RadioButton
+                android:id="@+id/rbSouthKhartoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جنوب الخرطوم"/>
+
+            <RadioButton
+                android:id="@+id/rbNorthKhartoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="شمال الخرطوم"/>
+
+            <RadioButton
+                android:id="@+id/rbEastKhartoum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="شرق الخرطوم"/>
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/etArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="المنطقة السكنية"
+            android:inputType="text"/>
+        <!-- جودة خدمات الرعاية الصحية -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم جودة خدمات الرعاية الصحية في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgHealthQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- سهولة الوصول إلى الخدمات -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما مدى سهولة الوصول إلى الخدمات الصحية؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgAccessEase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbVeryEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="سهلة جدًا"/>
+
+            <RadioButton
+                android:id="@+id/rbEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="سهلة"/>
+
+            <RadioButton
+                android:id="@+id/rbNeutralAccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="محايدة"/>
+
+            <RadioButton
+                android:id="@+id/rbDifficult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="صعبة"/>
+
+            <RadioButton
+                android:id="@+id/rbVeryDifficult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="صعبة جدًا"/>
+        </RadioGroup>
+        <!-- وقت الانتظار -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما هو متوسط وقت الانتظار للحصول على خدمة صحية؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgWaitTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbVeryShort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قصير جدًا (أقل من 10 دقائق)"/>
+
+            <RadioButton
+                android:id="@+id/rbShort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قصير (10-30 دقيقة)"/>
+
+            <RadioButton
+                android:id="@+id/rbMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسط (30-60 دقيقة)"/>
+
+            <RadioButton
+                android:id="@+id/rbLong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="طويل (أكثر من ساعة)"/>
+        </RadioGroup>
+
+        <!-- كفاءة الطاقم الطبي -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم كفاءة الطاقم الطبي في تقديم الخدمة؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgMedicalStaffEfficiency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+        <!-- الراحة والنظافة -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم مستوى الراحة والنظافة في مرافق الرعاية الصحية؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgComfortAndCleanliness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentComfort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodComfort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageComfort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorComfort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- توافر الأدوية -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم توافر الأدوية في المرافق الصحية؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgMedicineAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RadioButton
+                android:id="@+id/rbExcellentMedicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتاز"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodMedicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="جيد"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageMedicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسط"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorMedicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيف"/>
+        </RadioGroup>
+
+        <!-- جودة الخدمة العامة -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم جودة الخدمة العامة في المرافق الصحية؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgOverallServiceQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتاز"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيد"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسط"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيف"/>
+        </RadioGroup>
+        <!-- اقتراحات -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما هي التحسينات التي تقترحها لتحسين جودة خدمات الرعاية الصحية؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etHealthImprovements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل تحسينات الرعاية الصحية هنا"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="هل لديك أي تعليقات إضافية أو اقتراحات؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etAdditionalComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="هل لديك أي تعليقات إضافية أو اقتراحات؟ يمكن اضف معلومات الاتصال هنا بريد الالكتروني او رقم هاتف"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+        <!-- زر الإرسال -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="إرسال"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:padding="16dp"/>
+        <!-- Add this to your activity_health_survey.xml layout -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" /> <!-- Initially hidden -->
+
+        <!-- Lottie Animation for success -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/successAnimation"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/circle_loader"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false" />
+
+    </LinearLayout>
+</ScrollView>

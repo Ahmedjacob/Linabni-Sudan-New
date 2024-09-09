@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Security_Survey"
+    android:layoutDirection="rtl"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نشكركم على تخصيص الوقت للمشاركة في هذا الاستبيان. هدفنا هو تقييم وتحسين جودة الخدمات الأمنية والحماية المقدمة في منطقتكم. نرجو منكم الإجابة على الأسئلة التالية بناءً على تجربتكم الشخصية."
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tvComplaintCountsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="عدد الشكاوى و المقترحات : 0"
+            android:textAlignment="center"
+            android:textColor="#16831A"
+            android:textSize="18dp" />
+
+        <!-- Personal Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="معلومات أساسية"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الاسم (اختياري)"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="المنطقة السكنية"
+            android:inputType="text"/>
+
+        <!-- Security Service Quality -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم جودة الخدمات الأمنية في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgSecurityQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentSecurity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodSecurity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageSecurity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorSecurity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- Response Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم سرعة استجابة فرق الأمن للحوادث في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgResponseTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentResponse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodResponse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageResponse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorResponse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- Safety Perception -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم شعور الأمان في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgSafetyPerception"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbVerySafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="آمن جداً"/>
+
+            <RadioButton
+                android:id="@+id/rbSafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="آمن"/>
+
+            <RadioButton
+                android:id="@+id/rbNeutralSafety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="محايد"/>
+
+            <RadioButton
+                android:id="@+id/rbUnsafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="غير آمن"/>
+
+            <RadioButton
+                android:id="@+id/rbVeryUnsafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="غير آمن تماماً"/>
+        </RadioGroup>
+
+        <!-- Emergency Services -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كيف تقيم جودة خدمات الطوارئ في منطقتك؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgEmergencyServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbExcellentEmergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ممتازة"/>
+
+            <RadioButton
+                android:id="@+id/rbGoodEmergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جيدة"/>
+
+            <RadioButton
+                android:id="@+id/rbAverageEmergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسطة"/>
+
+            <RadioButton
+                android:id="@+id/rbPoorEmergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ضعيفة"/>
+        </RadioGroup>
+
+        <!-- Suggestions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما هي التحسينات التي تقترحها لتحسين الخدمات الأمنية؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etSecurityImprovements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل تحسينات الأمن هنا"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="هل لديك أي تعليقات إضافية أو اقتراحات؟"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etAdditionalComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="هل لديك أي تعليقات إضافية أو اقتراحات؟ يمكن اضف معلومات الاتصال هنا بريد الالكتروني او رقم هاتف"
+            android:inputType="textMultiLine"
+            android:lines="3"/>
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="إرسال"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
